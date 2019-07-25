@@ -18,6 +18,7 @@ public class NacosProviderApplication {
 
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name") String name){
+		System.out.println("---------Provider service----------");
 		return "hello "+name+"!";
 	}
 }

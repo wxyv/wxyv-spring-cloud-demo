@@ -13,17 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-public class NacosConsuerApplication {
+public class NacosConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NacosConsuerApplication.class, args);
+		SpringApplication.run(NacosConsumerApplication.class, args);
 	}
 
 	@Autowired
-	HellowService hellowService;
+    HelloService helloService;
 
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name") String name){
-		return hellowService.hello(name);
+	@GetMapping("/")
+	public String hello(){
+        System.out.println("---------Consumer service----------");
+	    return helloService.hello("consumer");
 	}
 }
