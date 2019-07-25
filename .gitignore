@@ -130,3 +130,7 @@ $RECYCLE.BIN/
 hs_err_pid*
 **/.mvn/
 /.idea
+*.iml
+**/mvnw
+**/mvnw.cmd
+**/target/
