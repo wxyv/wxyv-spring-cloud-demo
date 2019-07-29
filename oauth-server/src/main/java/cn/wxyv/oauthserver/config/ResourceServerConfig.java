@@ -34,11 +34,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
      */
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.resourceId("oauth-resource");
-        resources.tokenStore(inMemoryTokenStore);
+        resources.resourceId("oauth-resource").stateless(true);
+//        resources.tokenStore(inMemoryTokenStore);
     }
-
-    @Autowired
-    InMemoryTokenStore inMemoryTokenStore;
+//
+//    @Autowired
+//    InMemoryTokenStore inMemoryTokenStore;
 
 }
