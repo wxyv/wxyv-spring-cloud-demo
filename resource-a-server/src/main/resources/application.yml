@@ -1,0 +1,16 @@
+server:
+  port: 8104
+
+security:
+  oauth2:
+    client:
+      clientId: resource-a-service
+      clientSecret: password
+      access-token-uri: http://127.0.0.1:8103/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      user-info-uri: http://localhost:8103/user
+spring:
+  main:
+    allow-bean-definition-overriding: true
