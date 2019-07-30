@@ -45,6 +45,12 @@
             <artifactId>feign-okhttp</artifactId>
             <version>8.18.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.1-jre</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

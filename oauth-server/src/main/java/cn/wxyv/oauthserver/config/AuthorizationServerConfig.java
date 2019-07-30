@@ -66,7 +66,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .withClient("client")
                 .secret(passwordEncoder.encode("secret"))
                 .authorizedGrantTypes("password", "refresh_token")
-                .resourceIds("oauth-resource")
+                .resourceIds("oauth-resource","a-resource","b-resource")
                 .scopes("read", "write")
                 // token有效期：单位秒   1 hour
                 .accessTokenValiditySeconds(3600)
@@ -79,7 +79,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .withClient("resource-a-service")
                 .secret(passwordEncoder.encode("password"))
                 .authorizedGrantTypes("client_credentials", "refresh_token")
-                .resourceIds("oauth-resource")
+                .resourceIds("b-resource")
                 .scopes("server")
 
                 .and()
