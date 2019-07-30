@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -66,7 +65,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .withClient("client")
                 .secret(passwordEncoder.encode("secret"))
                 .authorizedGrantTypes("password", "refresh_token")
-                .resourceIds("oauth-resource","a-resource","b-resource")
+                .resourceIds("oauth-resource","a-resource")
                 .scopes("read", "write")
                 // token有效期：单位秒   1 hour
                 .accessTokenValiditySeconds(3600)

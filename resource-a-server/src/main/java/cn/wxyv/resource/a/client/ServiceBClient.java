@@ -1,5 +1,6 @@
 package cn.wxyv.resource.a.client;
 
+import cn.wxyv.resource.a.config.FeignConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-@FeignClient(url = "http://localhost:8105",name = "b-server",
+@FeignClient(url = "http://localhost:8105",name = "b-server", configuration= FeignConfig.class,
         fallback = ServiceBClient.ServiceBClientFallback.class)
 public interface ServiceBClient {
 
