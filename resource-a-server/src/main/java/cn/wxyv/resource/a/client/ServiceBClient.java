@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-@FeignClient(url = "http://localhost:8105",name = "b-server", configuration= FeignConfig.class,
+@FeignClient(url = "http://localhost:8105",name = "b-server", configuration = FeignConfig.class,
         fallback = ServiceBClient.ServiceBClientFallback.class)
 public interface ServiceBClient {
 

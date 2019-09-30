@@ -62,7 +62,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.resourceId("a-resource").stateless(true);
         resources.tokenServices(tokenServices());
-//        resources.tokenStore(inMemoryTokenStore);
     }
 
     @Bean
