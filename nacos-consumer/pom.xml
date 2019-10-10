@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.wxyv</groupId>
-	<artifactId>nacos-consuer</artifactId>
+	<artifactId>nacos-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>nacos-consumer</name>
 
