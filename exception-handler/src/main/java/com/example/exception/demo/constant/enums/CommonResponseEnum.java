@@ -28,7 +28,6 @@ public enum CommonResponseEnum implements CommonExceptionAssert {
      */
     SERVER_ERROR(9999, "网络异常"),
 
-
     NOT_NULL(5001, "数据不能为空"),
     ;
 
